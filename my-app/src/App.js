@@ -1,4 +1,16 @@
- import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
+export default function App() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  return (
+    <div>
+      {import React, { useState } from 'react';
 import { Plus, RotateCcw, Calculator, Zap, AlertTriangle } from 'lucide-react';
 
 const MeterTracker = () => {
@@ -219,3 +231,9 @@ const MeterTracker = () => {
 };
 
 export default MeterTracker;
+}
+    </div>
+  );
+}
+
+
